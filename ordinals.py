@@ -153,5 +153,3 @@ class Ordinal:
 z = Ordinal([])
 sz = Ordinal([(z,1)])
 w = Ordinal([(sz,1)])
-print((w+sz)*(w+sz)*(w+sz))
-print(5*w**w**(5 + w**(5*w**2 + 2*w + 3)))
