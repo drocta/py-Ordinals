@@ -27,13 +27,13 @@ class Ordinal:
             if(len(form[0][0].form) == 1):
                 if(str(form[0][0]) == "1"):
                     return 'w'
-                return "w^" + str(form[0][0])
-            return "w^(" + str(form[0][0]) + ")"
+                return "w**" + str(form[0][0])
+            return "w**(" + str(form[0][0]) + ")"
         if(len(form[0][0].form) == 1):
             if(str(form[0][0]) == "1"):
                 return str(form[0][1]) + 'w'
-            return str(form[0][1]) + "*w^" + str(form[0][0])
-        return str(form[0][1]) + "*w^(" + str(form[0][0]) + ")"
+            return str(form[0][1]) + "*w**" + str(form[0][0])
+        return str(form[0][1]) + "*w**(" + str(form[0][0]) + ")"
         
     
     def __str__(self):
@@ -157,6 +157,8 @@ class Ordinal:
             return self
         
         if(str(self) == 'w'):
+            if(other.form[0][0] == other):
+                return other
             return Ordinal([(other,1)])
         
         if(other.is_finite()):
@@ -190,8 +192,8 @@ class Ordinal:
         to produce the ordinal 5."""
         assert(isinstance(n,(int,long)) and n >= 0)
         if(n == 0):
-            return cls([])
-        return cls([(cls.int(0),n)])
+            return Ordinal([])
+        return Ordinal([(Ordinal.int(0),n)])
 
 
 z = Ordinal([])
