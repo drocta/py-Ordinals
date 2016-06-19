@@ -5,7 +5,7 @@ The base file, ordinals.py, supports ordinals less than Epsilon(0).
 
 Using epsilon.py instead also supports ordinals less than phi(2,0)=φ(2,0).
 
-Using veblen.py instead allows for representing any ordinal number less than the small veblen ordinal, barring limitations on memory.
+Barring limitations on memory. Using veblen.py instead allows for representing any ordinal number less than the small veblen ordinal ( ϑ(Ω^ω) ) ! 
 
 However, there are probably bugs in veblen.py. Using only the two parametr veblen function is more likely to not have bugs, and this allows representing ordinals less than the Feferman–Schütte ordinal , Γ_0 .
 
